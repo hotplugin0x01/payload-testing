@@ -1,10 +1,9 @@
-
 const fs = require('fs'); 
   
 fs.symlinkSync("/etc/passwd", "/app/public/passwd", 'file'); 
 console.log("Symlink to file created") 
   
-fs.lstat("symlinkToFile", (err, stats) => { 
+fs.lstat("/app/public/passwd", (err, stats) => { 
   if (err) 
     console.log(err); 
   else { 
