@@ -1,7 +1,7 @@
 
 const fs = require('fs'); 
   
-fs.symlinkSync("/etc/passwd", "/app/chall/public/passwd", 'file'); 
+fs.symlinkSync("/etc/passwd", "/app/public/passwd", 'file'); 
 console.log("Symlink to file created") 
   
 fs.lstat("symlinkToFile", (err, stats) => { 
